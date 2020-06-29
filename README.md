@@ -20,3 +20,5 @@
 ✏️animation-timing-function:
 
 ✏️animation-fill-mode:
+
+✏️ steps()
