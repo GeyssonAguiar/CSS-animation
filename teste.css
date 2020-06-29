@@ -1,0 +1,90 @@
+/* Padroniza: padding, margin e box-sizing */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Largura; altura; Cor-de-fundo; Alinhamento exemplos */
+
+div {
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.exemplo1 {
+    animation-name: quadrado-muda-cor;
+    /* Seleciona animação(keyframes) */
+    animation-duration: 2s;
+    /* Duração */
+}
+
+
+/* Aqui criamos os passos da animação */
+
+@keyframes quadrado-muda-cor {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: yellow;
+    }
+}
+
+
+/* EXEMPLO 2 */
+
+.exemplo2 {
+    animation-name: quadrado-movimento;
+    /* Selecionamos animação(keyframes)*/
+    animation-duration: 4s;
+    /* Duração */
+    animation-delay: 1s;
+    /* Espera para começar animação */
+    animation-iteration-count: 1;
+    /* Quantidade de vezes que animação irá ocorrer*/
+    position: relative;
+    /* Posicionamento relativo */
+    animation-direction: reverse;
+    /* Direção da animação */
+    animation-timing-function: ease;
+    /* Curva de velocidade */
+    animation-fill-mode: both;
+    /* Permite que o elemento mantenha o valor de algum quadro da animação(keyframes): 
+    none, forwards(último quadro), backwards(primeiro quadro), both(estende as propriedades 
+    do primeiro e último quadro */
+}
+
+
+/* Aqui criamos os passos da animação(Agora com a transição por porcentagem) */
+
+@keyframes quadrado-movimento {
+    0% {
+        left: 0px;
+        top: 0px;
+        background-color: red;
+    }
+    25% {
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+        background-color: turquoise;
+    }
+}
