@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: rgba(25, 25, 25);
+        }
+        
+        .line {
+            border-right: 2px solid rgba(255, 255, 255, .75);
+            color: white;
+            font-size: 3em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .typing-animation {
+            animation: blinkCursor 500ms steps(40) infinite normal, typing 4s steps(40) 1s normal both;
+        }
+        
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 12em;
+            }
+        }
+        
+        @keyframes blinkCursor {
+            from {
+                border-right-color: rgba(255, 255, 255, 0.897)
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+    </style>
+    <p class="line typing-animation">Olá, meu nome é Geysson</p>
+</body>
+
+
+
+
+</html>
